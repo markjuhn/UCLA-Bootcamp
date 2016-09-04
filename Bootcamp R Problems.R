@@ -1,8 +1,7 @@
 #Boot Camp problem
 #Mark Juhn
-#Problem 1
 
+# This will calculate the mean of 10 random standard normal variables
+mean( rnorm( 10 ) )
 
-#Problem 2
-
-#Problem 3
+#B.1 Help
