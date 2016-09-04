@@ -5,3 +5,13 @@
 mean( rnorm( 10 ) )
 
 #B.1 Help
+'?' (mean)
+help(mean)
+
+help.search("mean")
+apropos("mean")
+
+RSiteSearch("violin")
+RSiteSearch("violin", restrict = c("functions"))
+
+help(RSiteSearch)
