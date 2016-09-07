@@ -71,5 +71,22 @@ a * c(1,2,1)
 1:4 * 1:2
 1:4 * c(1, 2, 1, 2)
 
-#B.3.3
+#B.3.3 Extraction and missing values
 
+Y[1]
+Y[1:3]
+Y > mean(Y)
+Y[Y > mean(Y)]
+
+a <- c(5, 3, 6, NA)
+a
+is.na(a)
+!is.na(a)
+na.exclude(a)
+
+mean(a)
+mean(a, na.rm = TRUE)
+d <- na.exclude(a)
+mean(d)
+
+#B.3.4 Matrices
