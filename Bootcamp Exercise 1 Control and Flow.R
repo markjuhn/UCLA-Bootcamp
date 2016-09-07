@@ -46,9 +46,27 @@ bankAccounts <- c(10, 9.2, 5.6, 3.7, 8.8, 0.5);
 compounded <- rep(1, length(bankAccounts))
 interestRate <- 0.0125;
 for (i in 1:length(bankAccounts)) {
-  compounded[i] <- interestRate*bankAccounts[i] + bankAccounts[i]; }
+  compounded[i] <- interestRate*bankAccounts[i] + bankAccounts[i] 
+  }
 
 #HINT: variables must be initialized before you can perform operations on them
 #HINT 2: look at the rep() function and see if you can use that to initialize a variable that will help you.
 
+## Exercise 6
+
+bankAccounts <- c(10, 9.2, 5.6); #define bank accounts here
+interestRate <- 0.0525;   
+house <- c(4.8, 3.8, 5.7); #deduct
+food<- c(3.5, 4.3, 5.0);    #deduct
+fun <- c(7.8, 2.1, 10.5);  #deduct
+#and incomes (through TAships) of 
+income <- c(21, 21, 21); #add this
+expenses <- house + food + fun
+compounded <- rep(1, length(bankAccounts))
+for (j in 1:5) {
+  for (i in 1:length(bankAccounts)) {
+    bankAccounts[i] <- bankAccounts[i] + income[i] - expenses[i]
+    compounded[i] <- interestRate*bankAccounts[i] + bankAccounts[i] 
+  }
+}
 
