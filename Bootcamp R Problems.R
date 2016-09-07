@@ -17,3 +17,7 @@ RSiteSearch("violin", restrict = c("functions"))
 help(RSiteSearch)
 
 #B.2 Assignment
+a <- 2 + 3
+b <- a + a
+a + a; a + b
+
