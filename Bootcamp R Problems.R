@@ -21,3 +21,6 @@ a <- 2 + 3
 b <- a + a
 a + a; a + b
 
+#B.3 Data Structures
+#B.3.1 Vectors
+
