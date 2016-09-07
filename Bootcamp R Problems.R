@@ -38,6 +38,8 @@ rep(1,3)
 rep(1:3, 2)
 rep(1:3, each = 2)
 
+#B.3.2 Getting information about vectors
+
 sum(Y)
 mean(Y)
 max(Y)
@@ -55,3 +57,19 @@ Y > 10
 Y > mean(Y)
 Y == 11
 Y != 11
+
+a <- 1:3
+b<- 4:6
+a+b
+a*b
+a/b
+a+1
+a * 2
+1/a
+a * 1:2
+a * c(1,2,1)
+1:4 * 1:2
+1:4 * c(1, 2, 1, 2)
+
+#B.3.3
+
