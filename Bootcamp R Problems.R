@@ -15,3 +15,5 @@ RSiteSearch("violin")
 RSiteSearch("violin", restrict = c("functions"))
 
 help(RSiteSearch)
+
+#B.2 Assignment
