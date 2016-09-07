@@ -24,3 +24,34 @@ a + a; a + b
 #B.3 Data Structures
 #B.3.1 Vectors
 
+Y <- c(8.3, 8.6, 10.7, 10.8, 11, 11, 11.1, 11.2, 11.3, 11.4)
+
+1:4
+4:1
+-1:3
+-(1:3)
+
+seq(from =1, to = 3, by = 0.2)
+seq(1, 3, b = 0.2)
+seq(1, 3, length = 7)
+rep(1,3)
+rep(1:3, 2)
+rep(1:3, each = 2)
+
+sum(Y)
+mean(Y)
+max(Y)
+length(Y)
+summary(Y)
+
+Names <- c("Sarah", "Yunluan")
+Names
+b <- c(TRUE, FALSE)
+b
+class(Y)
+class(b)
+
+Y > 10
+Y > mean(Y)
+Y == 11
+Y != 11
