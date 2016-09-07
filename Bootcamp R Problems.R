@@ -90,3 +90,18 @@ d <- na.exclude(a)
 mean(d)
 
 #B.3.4 Matrices
+
+matrix(letters[1:4], ncol = 2)
+M <- matrix(1:4, nrow = 2)
+M
+M2 <- matrix(1:4, nrow = 2, byrow = TRUE)
+I <- diag(1, nrow = 2)
+I
+Minv <- solve(M)
+M %*% Minv
+
+M[1,2]
+M[1, 1:2]
+M[,2]
+M[,]
+
