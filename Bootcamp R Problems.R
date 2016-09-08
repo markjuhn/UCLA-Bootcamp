@@ -105,3 +105,23 @@ M[1, 1:2]
 M[,2]
 M[,]
 
+#B4 Functions
+help(mean)
+mean(1:4)
+mean(1:4, trim = 0)
+class(1:10)
+class(warpbreaks)
+summary(1:10)
+summary(warpbreaks)
+
+summary(lm(breaks ~ wool, data = warpbreaks))
+
+##B.4.1 writing your own functions
+FakeMean <- function(x, cheat = 0.05) {
+  SumOfX <- sum(x)
+  n <- length(x)
+  trueMean <- SumOfX/n
+  (1 + cheat) * trueMean
+}
+FakeMean(c(10,20,30), cheat = .5)
+
