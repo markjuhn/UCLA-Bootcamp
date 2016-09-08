@@ -84,3 +84,14 @@ while (x < 18) {
   x <- x + 1
 }
 
+#Exercise 9
+myfunction <- function(number) {
+  if (number <= -1) {
+    print ("small")
+  } else if (number >= 1) {
+    print ("big")
+  } else {
+    print ("medium")
+  }
+}
+
