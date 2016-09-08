@@ -70,3 +70,17 @@ for (j in 1:5) {
   }
 }
 
+##Exercise 7
+##NEED TO ASK IF THE STUDENTS HAVE A BEGINING BANK ACCOUNT, OR IF THEY START FROM ZERO
+##ASSUME STARTING FROM ZERO
+## DO LATER
+
+
+#Exercise 8
+x <- 1
+a = 0
+while (x < 18) {
+  a <- a + x
+  x <- x + 1
+}
+
