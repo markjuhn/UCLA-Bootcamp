@@ -125,3 +125,18 @@ FakeMean <- function(x, cheat = 0.05) {
 }
 FakeMean(c(10,20,30), cheat = .5)
 
+##B.6
+# Iteration of independent actions
+
+m <- matrix(1:10, nrow = 2)
+m
+apply(m, MARGIN = 1, mean)
+apply(m, MARGIN = 2, sum)
+sapply(1:10, function(i) mean(rnorm(5)))
+
+# Dependent iterations
+gens <- 10
+output <- numeric(gens + 1)
+output[1] <- 25
+for (t in 1:gens) output[t+1] <- output[t] + round(rnorm(n = 1, mean = 0, sd = 2), 0)
+output
