@@ -140,3 +140,20 @@ output <- numeric(gens + 1)
 output[1] <- 25
 for (t in 1:gens) output[t+1] <- output[t] + round(rnorm(n = 1, mean = 0, sd = 2), 0)
 output
+
+#B.13 Graphics
+
+data(trees)
+attach(trees)
+plot(Girth, Height)
+
+par(mar = c(5, 4, 3, 2))
+plot(Girth, Volume, type = "n", main = "My Trees")
+points(Girth, Volume, type = "h", col = "lightgrey", pch = 19)
+hts <- (Height - min(Height))/max(Height - min(Height))
+my.colors <- hcl(h= 30 + 270 * hts, alpha = 0.9)
+text(Girth, Volume, Height, col = my.colors, cex = 0.5 + hts)
+
+#B.13.3 more than one response variable
+tree.sort <- trees[order(trees$Girth, trees$Heigh),]
+matplot
