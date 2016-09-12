@@ -31,3 +31,22 @@ str(dd)
 mpfs <- which(dd$mode == 'MPF')
 mpf_swimmers <- dd[mpfs,]
 head(mpf_swimmers)
+
+unique(dd$mode)
+large <- .8
+large_fish <- which(dd$size >= large)
+large_fish_table <- dd[large_fish,]
+large_fish_table
+
+help(complete.cases)
+cleaned_1 <- dd[complete.cases(dd),]
+dd <- cleaned_1
+head(dd)
+
+str(tt)
+setdiff(dd$species, tt$tip.label)
+
+
+x <- 1:10
+y <- 1:20
+setdiff(y,x)
