@@ -33,5 +33,3 @@ discreteLogisticFun <- function(rr, NO, K, ttMax) {
   #Plot the results
   plot(1:(ttMax+1), NN, xlab = "time", ylab = "N", type = "b", col = "blue")
 }
-                                
-                
