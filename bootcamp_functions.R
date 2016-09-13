@@ -27,7 +27,7 @@ discreteLogisticFun <- function(rr, NO, K, ttMax) {
   
   # Loop over ttMax timesteps, using the model equation to update NN
   for (tt in 1:ttMax) {
-    NN[tt+1] <- (1+(RR*(1-(NN[tt])/K)))*NN[tt]
+    NN[tt+1] <- (1+(rr*(1-(NN[tt])/K)))*NN[tt]
   }
   
   #Plot the results
