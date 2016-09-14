@@ -33,13 +33,11 @@ for (i in 1:1000) {
 }
 
 #6
-bins <- seq(64, 74, .1)
+bins <- seq(64, 74, .5)
 hist(mean_heights_100, breaks = bins)$breaks
 hist(mean_heights_1000, breaks = bins)$breaks
 hundred_mean <- hist(mean_heights_100, breaks = bins)$counts
 thousand_mean <- hist(mean_heights_1000, breaks = bins)$counts
-
-barplot(rbind(hundred_mean, thousand_mean))
-#NEED TO COLOR AND STUFF
-min(mean_heights_100)
-max(mean_heights_100)
+barplot(rbind(hundred_mean, thousand_mean),col=c(2,4),beside=T,xlab="Average height (inches)",
+        ylab="Count", names.arg=seq(64,73.5,by=.5) )
+legend(6,350, c("n=100","n=1000"), col=c(2,4), pch=19)
