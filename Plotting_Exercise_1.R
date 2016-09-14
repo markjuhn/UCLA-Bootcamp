@@ -5,34 +5,31 @@ get_height <- function(n) {
   heights <- rnorm(n, 69, 10)
   return(heights)
 }
-## I'm not sure how to assign a variable that will persist outside the function
-## without assigning a global variable, which is bad
-get_height(10)
+
+heights <- get_height(100)
 
 #2
 get_height <- function(n) {
   heights <- rnorm(n, 69, 10)
-  return(mean(heights))
+  mean(heights)
 }
 
 #3
 get_height <- function(n) {
   heights <- rnorm(n, 69, 10)
-  cat("The mean height is", mean(heights), '\n')
+  return(mean(heights))
 }
 
 #4
 mean_heights_100 <- numeric(length = 1000)
 for (i in 1:1000) {
-  heights <- rnorm(100, 69, 10)
-  mean_heights_100[i] <-mean(heights)
+  mean_heights_100[i] <- get_height(100)
 }
 
 #5
 mean_heights_1000 <- numeric(length = 1000)
 for (i in 1:1000) {
-  heights <- rnorm(1000, 69, 10)
-  mean_heights_1000[i] <-mean(heights)
+  mean_heights_1000[i] <-get_height(1000)
 }
 
 #6
@@ -44,5 +41,5 @@ thousand_mean <- hist(mean_heights_1000, breaks = bins)$counts
 
 barplot(rbind(hundred_mean, thousand_mean))
 #NEED TO COLOR AND STUFF
-min(mean_heights_1000)
-max(mean_heights_1000)
+min(mean_heights_100)
+max(mean_heights_100)
