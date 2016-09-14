@@ -26,6 +26,44 @@ for (i in 1:10) {
 
 #Exercise 3, Done by hand
 
+#3.1
+
+dogs <- 10;
+for (i in 1:5){
+  dogs <- dogs + 1; 
+}
+
+#iteration 1 (initial): start dog = 10, end dog = 11
+#iteration 2: start dog = 11, end dog = 12
+#iteration 3: start dog = 12, end dog = 13
+#iteration 4: start dog = 13, end dog = 14
+#iteration 5: start dog = 14, end dog = 15
+
+#3.2
+###
+meatloaf <- 0; 
+for (i in 5:9){
+  meatloaf <- meatloaf - i + 1;
+  cat(meatloaf) 
+}
+#iteration 1 (initial): start meatloaf = 0; end meatloaf = -4
+#iteration 2 (6): start meatloaf = -4; end meatloaf = -9
+#iteration 3 (7): start meatloaf = -9; end meatloaf = -15
+#iteration 4 (8): start meatloaf = -15; end meatloaf = -22
+#iteration 5 (9): start meatloaf = -22; end meatloaf = -30
+
+#3.3
+#
+bubbles <- 12;
+for (i in -1:-4){
+  bubbles <- i;
+}
+
+#iteration 1 (initial): start bubbles = 12; end bubbles = -1
+#iteration 2: start bubbles = -1; end bubbles = -2
+#iteration 3: start bubbles = -2; end bubbles = -3
+#iteration 4: start bubbles = -3; end bubbles = -4
+
 #Exercise 4
 ###you can use the if statement with the modulus operator to conditionally perform operations
 years <- c( 2015, 2016, 2018, 2020, 2021)
