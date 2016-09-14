@@ -34,3 +34,15 @@ for (i in 1:1000) {
   heights <- rnorm(1000, 69, 10)
   mean_heights_1000[i] <-mean(heights)
 }
+
+#6
+bins <- seq(64, 74, .1)
+hist(mean_heights_100, breaks = bins)$breaks
+hist(mean_heights_1000, breaks = bins)$breaks
+hundred_mean <- hist(mean_heights_100, breaks = bins)$counts
+thousand_mean <- hist(mean_heights_1000, breaks = bins)$counts
+
+barplot(rbind(hundred_mean, thousand_mean))
+#NEED TO COLOR AND STUFF
+min(mean_heights_1000)
+max(mean_heights_1000)
