@@ -62,15 +62,40 @@ fun <- c(7.8, 2.1, 10.5);  #deduct
 #and incomes (through TAships) of 
 income <- c(21, 21, 21); #add this
 expenses <- house + food + fun
-compounded <- rep(1, length(bankAccounts))
 for (j in 1:5) {
   for (i in 1:length(bankAccounts)) {
     bankAccounts[i] <- bankAccounts[i] + income[i] - expenses[i]
-    compounded[i] <- interestRate*bankAccounts[i] + bankAccounts[i] 
+    bankAccounts[i] <- interestRate*bankAccounts[i] + bankAccounts[i] 
   }
 }
 
 ##Exercise 7
+
+###BEGIN AT ZERO =*(
+
+bankAccounts <- c(0, 0, 0)
+house <- c(4.8, 3.8, 5.7); 
+food<- c(3.5, 4.3, 5.0); 
+fun <- c(7.8, 2.1, 10.5); 
+income <- c(21, 21, 21);
+interestRate <- 0.0525;
+expenses <- house + food + fun
+
+for (j in 2015:2020) {
+  for (i in 1:length(bankAccounts)) {
+    if (j %% 2 == 1){
+      if (i %% 2 == 1) {
+        bankAccounts[i] <- bankAccounts[i] + 5
+      }
+    }
+    bankAccounts[i] <- bankAccounts[i] + income[i] - expenses[i]
+    bankAccounts[i] <- interestRate*bankAccounts[i] + bankAccounts[i] 
+  }
+}
+print(bankAccounts)
+
+##
+
 ##NEED TO ASK IF THE STUDENTS HAVE A BEGINING BANK ACCOUNT, OR IF THEY START FROM ZERO
 ##ASSUME STARTING FROM ZERO
 ## DO LATER
