@@ -14,12 +14,28 @@ time_end_model <- lm(formula = time_end$weight ~ time_end$Diet)
 anova(time_end_model)
 
 #3
-#IS THERE A DIFFERENCE?
+data <- ChickWeight
+data <- within (data, {
+  Chick <- factor(Chick)
+  Diet <- factor(Diet)
+  Time <- factor(Time)
+})
+summary(aov(weight ~ Diet * Time + Error(Chick), data = data))
+
 
 #4
 plot(ChickWeight$Time, ChickWeight$weight, col=ChickWeight$Diet,
      pch = 19, xlab = "Time (Days)", ylab = "Weight (gm)", main = "Chick Weights" )
 legend(1,350, c("Diet 1","Diet 2", "Diet 3", "Diet 4"), 
        unique(ChickWeight$Diet), col=1:length(ChickWeight$Diet))
+
+
+######
 #5
-plot(ChickWeight$Time, ChickWeight$weight, col=ChickWeight$Chick)
+plot(ChickWeight$Time, ChickWeight$weight, col=ChickWeight$Diet, type = "n", pch = 19, xlab = "Time (Days)", ylab = "Weight (gm)", main = "Chick Weights" )
+
+for (i in 1:length(unique(ChickWeight$Chick))) {
+  userow <- ChickWeight$Chick == i
+  lines(ChickWeight$Time[userow], ChickWeight$weight[userow], col = i)
+}
+
