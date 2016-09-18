@@ -41,9 +41,26 @@ for (i in 1:num_pval) {
 }
 
 #e
-a <- c(1, 3, 4,2,5)
-sort(a)
-head(sort(pvals))
-head(pvals)
-# sort this
+sort_pvals <- (sort(pvals))
+
+#f
+log_sort_pvals <- -log10(sort_pvals)
+log_exp_pvals <- -log10(exp_pvals)
+
+#g
+plot(log_exp_pvals,log_sort_pvals)
+
+#h
+plot(log_exp_pvals,log_sort_pvals)
+abline(a = 0, b = 1)
+
+#i
+plot(log_exp_pvals,log_sort_pvals,pch=19, 
+     xlab = "-log10(expected P-value",
+     ylab = "-log10(observed P-value",
+     cex.lab=1.2,cex.axis=1.2)
+abline(a = 0, b = 1, lwd = 4, col = "red", lty=2)
+
+#2
+
 
