@@ -62,5 +62,21 @@ plot(log_exp_pvals,log_sort_pvals,pch=19,
 abline(a = 0, b = 1, lwd = 4, col = "red", lty=2)
 
 #2
+#a
+zz=read.table('pheno.sim.2014-2.txt',header=TRUE)
 
+#b
+first_quantile <- quantile(zz$glucose_mmolperL, 0.25)
+first_quantile
+#value is 4.768756
 
+#c
+third_quantile <- quantile(zz$glucose_mmolperL, 0.75)
+third_quantile
+#value is 7.354975
+
+#d
+plot(density(zz$glucose_mmolperL),xlab = "Blood glucose levels",
+     main = "Blood glucose levels density plot", lwd = 3, cex.lab=1.2,cex.axis=1.2)
+abline(v=first_quantile,lty=2,lwd=3,col=2)
+abline(v=third_quantile,lty=2,lwd=3,col=4)
